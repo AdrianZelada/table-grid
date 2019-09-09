@@ -1,0 +1,24 @@
+<div class="agrid__body agrid__scroll-y" #content>
+
+  <div class="agrid__body--fixed--start" *ngIf="start.length > 0">
+    <div class="agrid__column-container">
+      <div class="agrid__row" *ngFor="let key of dataKey">
+        <div class="agrid__cell s_{{sch.prop}}" [ngStyle]="{'width': sch.width }" *ngFor="let sch of start">
+          {{dataObj[key][sch.prop]}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="agrid__container" [ngStyle]="{height: sizeHeightContent}" *ngIf="container.length > 0">
+    <div class="agrid__body--scroll">
+      <div class="agrid__column-container" [ngStyle]="move">
+        <div class="agrid__row" *ngFor="let key of dataKey">
+          <div class="agrid__cell c_{{sch.prop}}" [ngStyle]="{'width': sch.width}" *ngFor="let sch of container">
+            {{dataObj[key][sch.prop]}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

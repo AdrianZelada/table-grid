@@ -1,0 +1,84 @@
+<div class="container">
+  <!--AGRID LAYOUT-->
+  <div class="agrid__layout">
+
+    <!--AGRID HEADER-->
+    <div class="agrid__header">
+
+      <zt-grid-title></zt-grid-title>
+      <zt-grid-head [sizeStart]="sizeStart" [move]="move" [start]="startDock" [container]="container"></zt-grid-head>
+
+    </div>
+    <!--end AGRID HEADER-->
+
+    <!--AGRID BODY-->
+    <zt-grid-body [sizeHeightContent]="sizeHeightContent" (changesDom)="change($event)" [move]="move" [start]="startDock" [container]="container" [dataKey]="dataKey" [dataObj]="dataObj" style="height: 500px;"></zt-grid-body>
+    <!--end AGRID BODY-->
+
+    <!--AGRID FOOTER-->
+    <!--<div class="agrid__footer">-->
+
+      <!--<div class="agrid__row">-->
+
+        <!--<div class="agrid__footer&#45;&#45;fixed&#45;&#45;start">-->
+          <!--<div class="agrid__row">-->
+            <!--<div class="agrid__cell agrid__cell&#45;&#45;name"></div>-->
+            <!--<div class="agrid__cell agrid__cell&#45;&#45;check">2</div>-->
+            <!--<div class="agrid__cell agrid__cell&#45;&#45;check">1</div>-->
+            <!--<div class="agrid__cell agrid__cell&#45;&#45;check">10</div>-->
+            <!--<div class="agrid__cell agrid__cell&#45;&#45;check">4</div>-->
+          <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="agrid__container">-->
+          <!--<div class="agrid__header&#45;&#45;scroll">-->
+            <!--<div class="agrid__row" style="transform: translatex(-200px)">-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+              <!--<div class="agrid__cell agrid__cell&#45;&#45;check"></div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="agrid__footer&#45;&#45;fixed&#45;&#45;end">-->
+          <!--<div class="agrid__row">-->
+            <!--<div class="agrid__cell agrid__cell&#45;&#45;today">Total</div>-->
+          <!--</div>-->
+        <!--</div>-->
+
+      <!--</div>-->
+    <!--</div>-->
+    <!--end AGRID FOOTER-->
+
+    <!--AGRID SCROLL-->
+    <div class="agrid__scroll">
+      <div class="agrid__scroll--fixed--start" [ngStyle]="{'width': sizeStart, 'max-width': sizeStart,'min-width': sizeStart}"></div>
+      <div class="agrid__scroll-x"  (scroll)="changeScroll($event)" ><div class="agrid__scroll-container" [ngStyle]="{width: sizeContent}"></div></div>
+      <!--<div class="agrid__scroll&#45;&#45;fixed&#45;&#45;end"></div>-->
+    </div>
+    <!--end AGRID SCROLL-->
+
+  </div>
+  <!--end AGRID LAYOUT-->
+</div>

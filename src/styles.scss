@@ -1,1 +1,156 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+$success: #38D895;
+$warning: #FFD238;
+$info: #987DD1;
+$danger: #EE2C5C;
+$gray-lighter: #EBEBEB;
+$gray-middle: #C6C6C6;
+.w-100{
+  width: 100%;
+}
+.container{
+  width: 850px;
+  height: 500px;
+  margin: auto;
+  border: 1px solid #efefef;
+}
+.agrid{
+
+  &__layout {
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__scroll{
+    display: flex;
+    padding-right: 10px;
+    border-top: 1px solid $gray-lighter;
+    &-container{
+      height: 1px;
+      flex: 1 1 auto;
+    }
+    &-x,
+    &-y{
+      &::-webkit-scrollbar-thumb{
+        background: $gray-lighter;
+        border: 1px solid $gray-middle;
+        border-radius: 30px;
+      }
+    }
+    &-x{
+      overflow-x: scroll;
+      overflow-y: hidden;
+      &::-webkit-scrollbar {
+        height: 10px;
+      }
+    }
+    &-y{
+      overflow-y: scroll;
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+    }
+  }
+
+
+  &__header,
+  &__footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    white-space: nowrap;
+    flex: 1;
+    &--scroll{
+      white-space: nowrap;
+      display: flex;
+    }
+    .agrid__cell {
+      justify-content: center;
+    }
+
+  }
+  &__header,
+  &__footer,
+  &__scroll{
+    padding-right: 10px;
+  }
+  &__header,
+  &__footer,
+  &__scroll{
+    &--fixed--start{
+      //width: 424px;  //TODO INPUT
+      //max-width: 424px;  //TODO INPUT
+      //min-width: 424px;  //TODO INPUT
+
+      //width: 280px;  //TODO INPUT
+      //max-width: 280px;  //TODO INPUT
+      //min-width: 280px;  //TODO INPUT
+    }
+    &--fixed--end{
+      width: 144px;  //TODO INPUT
+      max-width: 144px;  //TODO INPUT
+      min-width: 144px;  //TODO INPUT
+    }
+  }
+  &__body{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    &--scroll{
+      white-space: nowrap;
+      display: flex;
+    }
+
+  }
+
+  &__container{
+    overflow: hidden;
+    flex: 1 1 auto;
+    border-right: 3px solid $gray-lighter;
+    border-left: 3px solid $gray-lighter;
+  }
+
+  &__row {
+    border-color: $gray-middle;
+    display: flex;
+    height: 56px; //TODO INPUT
+    flex-direction: row;
+  }
+
+  &__cell {
+    display: inline-flex;
+    overflow: hidden;
+    //white-space: normal;
+    height: 56px;
+    padding: 12px;
+    align-items: center;
+    border-top: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-lighter;
+    border-right: 1px solid $gray-lighter;
+    &:first-child{
+      border-left: none;
+    }
+    &:last-child{
+      border-right: none;
+    }
+    &--name{
+      width: 280px;  //TODO INPUT
+    }
+    &--check{
+      width: 36px;  //TODO INPUT
+      justify-content: center;
+    }
+    &--today{
+      width: 144px;  //TODO INPUT
+    }
+  }
+
+}

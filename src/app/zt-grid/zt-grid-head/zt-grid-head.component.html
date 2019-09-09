@@ -1,0 +1,24 @@
+<div class="agrid__row">
+
+  <div class="agrid__header--fixed--start" [ngStyle]="{'width': sizeStart, 'max-width': sizeStart,'min-width': sizeStart}"  *ngIf="start.length > 0">
+    <div class="agrid__row">
+      <div class="agrid__cell s_{{sch.prop}}" [ngStyle]="{'width': sch.width }" *ngFor="let sch of start">{{sch.prop}}</div>
+    </div>
+  </div>
+
+  <div class="agrid__container">
+    <div class="agrid__header--scroll">
+      <div class="agrid__row" [ngStyle]="move">
+        <div class="agrid__cell c_{{sch.prop}}" [ngStyle]="{'width': sch.width}" *ngFor="let sch of container">{{sch.prop}}</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="agrid__header&#45;&#45;fixed&#45;&#45;end">-->
+    <!--<div class="agrid__row">-->
+      <!--<div class="agrid__cell agrid__cell&#45;&#45;today">Total</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+</div>
