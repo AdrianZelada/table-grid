@@ -69,7 +69,7 @@ export class ZtGridBodyComponent implements OnInit, AfterContentInit {
 
   ngAfterContentInit(): void {
     this.changes = new MutationObserver((mutations: MutationRecord[]) => {
-        console.error(mutations);
+        // console.error(mutations);
         if (this.dataKey.length > 0 && !this.statusChange) {
           this.changesDom.emit('created');
           this.statusChange = true;
