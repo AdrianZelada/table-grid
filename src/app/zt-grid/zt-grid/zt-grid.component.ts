@@ -92,7 +92,7 @@ export class ZtGridComponent implements OnInit {
   }
 
   change(status: string) {
-    console.log(status);
+    // console.log(status);
     if (status === 'created') {
       this.resizeGrid();
     }
@@ -183,7 +183,7 @@ export class ZtGridComponent implements OnInit {
   }
 
   changeScroll(e) {
-    console.log(e);
+    // console.log(e);
     // this.move = e.target.scrollLeft;
     this.move = this.transformScroll(e.target.scrollLeft);
   }

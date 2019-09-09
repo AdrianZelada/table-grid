@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
     }
     // setTimeout(() => {
       this.data = this.buildData(this.schema);
-    // }, 10);
+    // }, 1000);
 
   }
 

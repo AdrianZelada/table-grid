@@ -70,9 +70,11 @@ export class ZtGridBodyComponent implements OnInit, AfterContentInit {
   ngAfterContentInit(): void {
     this.changes = new MutationObserver((mutations: MutationRecord[]) => {
         // console.error(mutations);
-        if (this.dataKey.length > 0 && !this.statusChange) {
+        // if (this.dataKey.length > 0 && !this.statusChange) {
+        if (this.dataKey.length > 0 ) {
           this.changesDom.emit('created');
-          this.statusChange = true;
+          this.changes.disconnect();
+          // this.statusChange = true;
         }
         // mutations.forEach((mutation: MutationRecord) => {
         //   console.log(mutation);
@@ -86,6 +88,8 @@ export class ZtGridBodyComponent implements OnInit, AfterContentInit {
       characterData: true,
       subtree: true
     });
+
+
 
     // merge()
   }
